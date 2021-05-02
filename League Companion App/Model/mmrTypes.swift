@@ -8,8 +8,8 @@
 import Foundation
 
 struct MMR: Codable {
-    var ranked: ranked
-    var normal: normal
+    var ranked: Ranked
+    var normal: Normal
 }
 
 struct Ranked: Codable {
