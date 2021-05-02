@@ -10,6 +10,6 @@ import Foundation
 class DataController {
     // MARK: - Properties
     static let shared = DataController()
-    var rankedHistory: [Historical]? = []
-    var normalHistory: [Historical]? = []
+    var rankedHistory: [Historical] = []
+    var normalHistory: [Historical] = []
 }

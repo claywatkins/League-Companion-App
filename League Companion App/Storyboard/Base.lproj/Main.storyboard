@@ -229,9 +229,11 @@
                         <outlet property="dateSourcedLabel" destination="qDh-gB-lLt" id="U1c-jT-sHy"/>
                         <outlet property="mmrDataView" destination="p1d-Zs-5Sr" id="QkG-R0-9Sh"/>
                         <outlet property="normalGraphView" destination="JZW-Mh-Qej" id="zvs-Vw-WSf"/>
+                        <outlet property="normalHistoryGraph" destination="bNT-gZ-6C3" id="heQ-9n-8xM"/>
                         <outlet property="normalMMRActivityIndicator" destination="Ull-ZF-cTI" id="vPz-Yg-Aex"/>
                         <outlet property="normalMMRLabel" destination="AgD-5C-Dvb" id="al9-WO-iWJ"/>
                         <outlet property="rankedGraphView" destination="SCW-Xi-ccG" id="ALB-dp-Zom"/>
+                        <outlet property="rankedHistoryGraph" destination="d0r-CF-W4L" id="GSR-NB-qEW"/>
                         <outlet property="rankedMMRActivityIndicator" destination="DSb-Eh-YU2" id="RJb-fO-3xE"/>
                         <outlet property="rankedMMRLabel" destination="Wm5-kb-F0Q" id="Ww6-oJ-aic"/>
                         <outlet property="summonerNameTextField" destination="v4G-sx-8a6" id="cdI-zh-c1a"/>
