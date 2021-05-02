@@ -17,7 +17,7 @@ class NetworkController {
     static let shared = NetworkController()
     let baseURL = URL(string: "https://na.whatismymmr.com/api/v1/summoner?name=")!
     
-    func getMMR(summonerName: String, completion: @escaping (Result<mmr, NetworkError>) -> Void) {
+    func getMMR(summonerName: String, completion: @escaping (Result<MMR, NetworkError>) -> Void) {
         let requestURL = baseURL.appendingPathComponent(summonerName)
         var request = URLRequest(url: requestURL)
         request.httpMethod = "GET"
