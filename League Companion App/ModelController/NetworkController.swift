@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+enum NetworkError: Error {
+    case noData
+    case badDecode
+    case tryAgain
+}
+
+class NetworkController {
+    static let shared = NetworkController()
+    let baseURL = URL(string: "https://na.whatismymmr.com/api/v1/summoner?name=")
+    
+    func getMMR(summonerName: String, completion: @escaping (Result<mmr, NetworkError>) -> Void) {
+        
+    }
+}
