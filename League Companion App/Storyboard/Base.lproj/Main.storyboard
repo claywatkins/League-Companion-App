@@ -84,8 +84,11 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="DSb-Eh-YU2">
+                                                                <rect key="frame" x="186" y="0.0" width="20" height="24"/>
+                                                            </activityIndicatorView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMR #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wm5-kb-F0Q">
-                                                                <rect key="frame" x="186" y="0.0" width="196" height="24"/>
+                                                                <rect key="frame" x="270" y="0.0" width="112" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -104,8 +107,11 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ull-ZF-cTI">
+                                                                <rect key="frame" x="181" y="0.0" width="20" height="24"/>
+                                                            </activityIndicatorView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMR #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgD-5C-Dvb">
-                                                                <rect key="frame" x="181" y="0.0" width="201" height="24"/>
+                                                                <rect key="frame" x="262" y="0.0" width="120" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -176,7 +182,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="normalMMRActivityIndicator" destination="Ull-ZF-cTI" id="vPz-Yg-Aex"/>
                         <outlet property="normalMMRLabel" destination="AgD-5C-Dvb" id="al9-WO-iWJ"/>
+                        <outlet property="rankedMMRActivityIndicator" destination="DSb-Eh-YU2" id="RJb-fO-3xE"/>
                         <outlet property="rankedMMRLabel" destination="Wm5-kb-F0Q" id="Ww6-oJ-aic"/>
                         <outlet property="summonerNameTextField" destination="v4G-sx-8a6" id="cdI-zh-c1a"/>
                     </connections>
