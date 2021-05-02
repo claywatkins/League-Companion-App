@@ -32,6 +32,9 @@ class HomeViewController: UIViewController {
     
     // MARK: - Methods
     private func hideUIElements() {
+        mmrDataView.alpha = 0
+        rankedGraphView.alpha = 0
+        normalGraphView.alpha = 0
         rankedMMRLabel.isHidden = true
         rankedMMRActivityIndicator.isHidden = true
         normalMMRLabel.isHidden = true
@@ -39,11 +42,23 @@ class HomeViewController: UIViewController {
         dateSourcedLabel.isHidden = true
     }
     
+    private func fadeInViews() {
+        let views = [mmrDataView, rankedGraphView, normalGraphView]
+        var delayCounter = 0
+        for view in views{
+            UIView.animate(withDuration: 1.25, delay: Double(delayCounter) * 0.5, options: .curveEaseInOut, animations: {
+                view!.alpha = 1
+            }, completion: nil)
+            delayCounter += 1
+        }
+    }
+    
     // MARK: - IBAction
     @IBAction func searchButtonTapped(_ sender: Any) {
         guard let summonerName = summonerNameTextField.text, !summonerName.isEmpty else { return }
         rankedMMRLabel.text = ""
         normalMMRLabel.text = ""
+        fadeInViews()
         rankedMMRActivityIndicator.isHidden = false
         rankedMMRActivityIndicator.startAnimating()
         normalMMRActivityIndicator.isHidden = false
