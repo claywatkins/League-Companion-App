@@ -16,6 +16,7 @@
 		0B989E59263F0587008A4565 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B989E58263F0587008A4565 /* NetworkController.swift */; };
 		0B989E5C263F05A4008A4565 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B989E5B263F05A4008A4565 /* HomeViewController.swift */; };
 		0BD7714D263F235F002EACE5 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 0BD7714C263F235F002EACE5 /* Charts */; };
+		0BF49E52263F541B00358FD6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF49E51263F541B00358FD6 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,7 @@
 		0B989E55263F0562008A4565 /* mmrTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mmrTypes.swift; sourceTree = "<group>"; };
 		0B989E58263F0587008A4565 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		0B989E5B263F05A4008A4565 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0BF49E51263F541B00358FD6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				0B989E58263F0587008A4565 /* NetworkController.swift */,
+				0BF49E51263F541B00358FD6 /* DataController.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B989E5C263F05A4008A4565 /* HomeViewController.swift in Sources */,
+				0BF49E52263F541B00358FD6 /* DataController.swift in Sources */,
 				0B989E59263F0587008A4565 /* NetworkController.swift in Sources */,
 				0B989E56263F0562008A4565 /* mmrTypes.swift in Sources */,
 				0B989E39263F0291008A4565 /* AppDelegate.swift in Sources */,
