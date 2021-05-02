@@ -14,7 +14,7 @@ struct MMR: Codable {
 
 struct Ranked: Codable {
     var avg: Int?
-    var timestamp: Int?
+    var timestamp: Double?
 }
  
 struct Normal: Codable {
