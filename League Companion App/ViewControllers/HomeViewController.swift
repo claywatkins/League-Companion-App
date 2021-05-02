@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     // MARK: - IBOutlet
+    @IBOutlet weak var dateSourcedLabel: UILabel!
     @IBOutlet weak var rankedMMRLabel: UILabel!
     @IBOutlet weak var rankedMMRActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var normalMMRLabel: UILabel!
@@ -17,11 +18,13 @@ class HomeViewController: UIViewController {
     
     // MARK: - Properties
     var networkController = NetworkController.shared
+    let df = DateFormatter()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         hideUIElements()
+        df.dateFormat = "MMMM dd,yyyy"
     }
     
     // MARK: - Methods
@@ -30,11 +33,14 @@ class HomeViewController: UIViewController {
         rankedMMRActivityIndicator.isHidden = true
         normalMMRLabel.isHidden = true
         normalMMRActivityIndicator.isHidden = true
+        dateSourcedLabel.isHidden = true
     }
     
     // MARK: - IBAction
     @IBAction func searchButtonTapped(_ sender: Any) {
         guard let summonerName = summonerNameTextField.text, !summonerName.isEmpty else { return }
+        rankedMMRLabel.text = ""
+        normalMMRLabel.text = ""
         rankedMMRActivityIndicator.isHidden = false
         rankedMMRActivityIndicator.startAnimating()
         normalMMRActivityIndicator.isHidden = false
@@ -42,7 +48,9 @@ class HomeViewController: UIViewController {
         networkController.getMMR(summonerName: summonerName) { [weak self] result in
             do {
                 let returnedMMR = try result.get()
-                DispatchQueue.main.async {
+                let timeInterval = TimeInterval(returnedMMR.normal.timestamp!)
+                let date = Date(timeIntervalSince1970: timeInterval)
+                DispatchQueue.main.async { [weak self] in
                     self?.rankedMMRActivityIndicator.stopAnimating()
                     self?.rankedMMRActivityIndicator.isHidden = true
                     self?.normalMMRActivityIndicator.stopAnimating()
@@ -55,6 +63,8 @@ class HomeViewController: UIViewController {
                         self?.rankedMMRLabel.text = "No MMR Found"
                     }
                     if let normalMMR = returnedMMR.normal.avg {
+                        self?.dateSourcedLabel.isHidden = false
+                        self?.dateSourcedLabel.text = "Data from \(self?.df.string(from: date) ?? "")"
                         self?.normalMMRLabel.isHidden = false
                         self?.normalMMRLabel.text = "\(normalMMR)"
                     } else {
