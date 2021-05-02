@@ -45,5 +45,11 @@ class HomeViewController: UIViewController {
         }
     }
     
+}
 
+// MARK: - Extension
+extension HomeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        scrollView.contentOffset.x = 0.0
+    }
 }
