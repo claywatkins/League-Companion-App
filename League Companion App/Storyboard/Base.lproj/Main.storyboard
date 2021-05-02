@@ -16,99 +16,169 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's my MMR?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rey-8V-uVx">
-                                <rect key="frame" x="73" y="89" width="259" height="41"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jiq-Bl-zV5">
-                                <rect key="frame" x="20" y="175" width="374" height="100.5"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEf-WM-6OY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summoner Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV6-dN-IO1">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Summoner Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e40-Te-Wpk">
-                                        <rect key="frame" x="0.0" y="28.5" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stC-fo-sN7">
-                                        <rect key="frame" x="0.0" y="70.5" width="374" height="30"/>
-                                        <state key="normal" title="Search"/>
-                                        <connections>
-                                            <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xnh-uR-t9Y"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="foa-Z4-Lec">
-                                <rect key="frame" x="20" y="320.5" width="374" height="88"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="Orf-V4-fFa">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02a-gz-wa2" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="422" height="818"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiQ-jK-1Fr">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="tkP-qz-ola"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="4rD-NC-TQh">
+                                                <rect key="frame" x="20" y="369.5" width="382" height="230"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranked Graph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ms2-W7-79a">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0r-CF-W4L">
+                                                        <rect key="frame" x="0.0" y="30" width="382" height="200"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="Ytg-H9-xEK"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's my MMR?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n22-dK-1Ud">
+                                                <rect key="frame" x="20" y="30" width="382" height="41"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMR #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHx-Tc-lzk">
-                                                <rect key="frame" x="164" y="0.0" width="210" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LDT-tI-Isn">
+                                                <rect key="frame" x="20" y="101" width="382" height="100.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summoner Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIP-Gf-dw9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Summoner Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4G-sx-8a6">
+                                                        <rect key="frame" x="0.0" y="28.5" width="382" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQT-H7-lnV">
+                                                        <rect key="frame" x="0.0" y="70.5" width="382" height="30"/>
+                                                        <state key="normal" title="Search"/>
+                                                        <connections>
+                                                            <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1IB-GJ-fN7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-o2-Lgy">
+                                                <rect key="frame" x="20" y="241.5" width="382" height="88"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="bZN-T4-Xw4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranked MMR:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5p-dY-aBa">
+                                                                <rect key="frame" x="0.0" y="0.0" width="122" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="122" id="G7T-tB-8bO"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMR #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wm5-kb-F0Q">
+                                                                <rect key="frame" x="186" y="0.0" width="196" height="24"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Jru-ec-zr8">
+                                                        <rect key="frame" x="0.0" y="64" width="382" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Normal MMR:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8H-gp-pp0">
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="zwh-NK-jdb"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMR #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgD-5C-Dvb">
+                                                                <rect key="frame" x="181" y="0.0" width="201" height="24"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="lTO-ai-Foe">
+                                                <rect key="frame" x="20" y="629.5" width="382" height="230"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Normal Graph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kp-PA-0ya">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4l-0s-qHk">
+                                                        <rect key="frame" x="0.0" y="30" width="382" height="200"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="Ocb-q0-QGb"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="rJO-gE-dXA">
-                                        <rect key="frame" x="0.0" y="64" width="374" height="24"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Normal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRZ-Dx-4xG">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="q9e-l8-Iim"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMR #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jn8-xt-YX5">
-                                                <rect key="frame" x="161" y="0.0" width="213" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="n22-dK-1Ud" secondAttribute="trailing" constant="20" id="7dw-fV-BCB"/>
+                                            <constraint firstAttribute="trailing" secondItem="lTO-ai-Foe" secondAttribute="trailing" constant="20" id="868-NJ-X1z"/>
+                                            <constraint firstItem="4rD-NC-TQh" firstAttribute="top" secondItem="zdf-o2-Lgy" secondAttribute="bottom" constant="40" id="9dH-w0-fkm"/>
+                                            <constraint firstItem="lTO-ai-Foe" firstAttribute="leading" secondItem="02a-gz-wa2" secondAttribute="leading" constant="20" id="CGx-Nc-ibH"/>
+                                            <constraint firstItem="lTO-ai-Foe" firstAttribute="top" secondItem="4rD-NC-TQh" secondAttribute="bottom" constant="30" id="CIP-XM-5Gu"/>
+                                            <constraint firstItem="n22-dK-1Ud" firstAttribute="leading" secondItem="02a-gz-wa2" secondAttribute="leading" constant="20" id="D9s-9E-fO5"/>
+                                            <constraint firstItem="n22-dK-1Ud" firstAttribute="top" secondItem="02a-gz-wa2" secondAttribute="top" constant="30" id="FIJ-Y5-JKO"/>
+                                            <constraint firstItem="4rD-NC-TQh" firstAttribute="leading" secondItem="02a-gz-wa2" secondAttribute="leading" constant="20" id="J4K-nR-u8u"/>
+                                            <constraint firstItem="LDT-tI-Isn" firstAttribute="top" secondItem="n22-dK-1Ud" secondAttribute="bottom" constant="30" id="Yfj-QW-7Iq"/>
+                                            <constraint firstAttribute="trailing" secondItem="zdf-o2-Lgy" secondAttribute="trailing" constant="20" id="drr-2c-Knf"/>
+                                            <constraint firstItem="zdf-o2-Lgy" firstAttribute="leading" secondItem="02a-gz-wa2" secondAttribute="leading" constant="20" id="gZV-Av-c8Q"/>
+                                            <constraint firstItem="LDT-tI-Isn" firstAttribute="leading" secondItem="02a-gz-wa2" secondAttribute="leading" constant="20" id="h6D-wN-xo3"/>
+                                            <constraint firstAttribute="trailing" secondItem="4rD-NC-TQh" secondAttribute="trailing" constant="20" id="hSG-qG-lxc"/>
+                                            <constraint firstAttribute="height" constant="818" id="uTz-Jq-NCo"/>
+                                            <constraint firstAttribute="trailing" secondItem="LDT-tI-Isn" secondAttribute="trailing" constant="20" id="wNO-7b-jZe"/>
+                                            <constraint firstItem="zdf-o2-Lgy" firstAttribute="top" secondItem="LDT-tI-Isn" secondAttribute="bottom" constant="40" id="yN7-Wj-9Kb"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="02a-gz-wa2" firstAttribute="top" secondItem="yEf-WM-6OY" secondAttribute="top" id="awY-gG-45E"/>
+                                    <constraint firstItem="02a-gz-wa2" firstAttribute="bottom" secondItem="yEf-WM-6OY" secondAttribute="bottom" id="n0E-Pc-G2t"/>
+                                    <constraint firstAttribute="trailing" secondItem="02a-gz-wa2" secondAttribute="trailing" id="ojj-9C-9bV"/>
+                                    <constraint firstAttribute="width" secondItem="02a-gz-wa2" secondAttribute="width" multiplier="0.981043" id="q1x-xT-1dV"/>
+                                    <constraint firstItem="02a-gz-wa2" firstAttribute="leading" secondItem="yEf-WM-6OY" secondAttribute="leading" id="rgv-lN-ekf"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rBZ-wX-fzw"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Jiq-Bl-zV5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="C2I-lq-bky"/>
-                            <constraint firstItem="foa-Z4-Lec" firstAttribute="top" secondItem="Jiq-Bl-zV5" secondAttribute="bottom" constant="45" id="Cci-xx-YUU"/>
-                            <constraint firstItem="foa-Z4-Lec" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Hll-Di-6aF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jiq-Bl-zV5" secondAttribute="trailing" constant="20" id="WnH-4Z-6wr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rey-8V-uVx" secondAttribute="trailing" constant="82" id="Wyx-Nj-zKk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="foa-Z4-Lec" secondAttribute="trailing" constant="20" id="c4c-Zh-v0R"/>
-                            <constraint firstItem="Jiq-Bl-zV5" firstAttribute="top" secondItem="rey-8V-uVx" secondAttribute="bottom" constant="45" id="fEC-P3-tcb"/>
-                            <constraint firstItem="rey-8V-uVx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="iZE-5M-eVN"/>
-                            <constraint firstItem="rey-8V-uVx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="k5h-hX-ZNg"/>
+                            <constraint firstItem="yEf-WM-6OY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8Kn-S8-oJv"/>
+                            <constraint firstItem="yEf-WM-6OY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="E85-h7-JqX"/>
+                            <constraint firstItem="yEf-WM-6OY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GYm-UG-WC4"/>
+                            <constraint firstItem="yEf-WM-6OY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fAM-Vu-iby"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="normalMMRLabel" destination="jn8-xt-YX5" id="eKf-TW-2Pl"/>
-                        <outlet property="rankedMMRLabel" destination="LHx-Tc-lzk" id="db2-jD-rd5"/>
-                        <outlet property="summonerNameTextField" destination="e40-Te-Wpk" id="2uB-cu-3ZR"/>
+                        <outlet property="normalMMRLabel" destination="AgD-5C-Dvb" id="al9-WO-iWJ"/>
+                        <outlet property="rankedMMRLabel" destination="Wm5-kb-F0Q" id="Ww6-oJ-aic"/>
+                        <outlet property="summonerNameTextField" destination="v4G-sx-8a6" id="cdI-zh-c1a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
