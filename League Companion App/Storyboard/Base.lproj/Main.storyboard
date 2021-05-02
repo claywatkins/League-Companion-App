@@ -23,7 +23,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="422" height="818"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="4rD-NC-TQh">
-                                                <rect key="frame" x="20" y="369.5" width="382" height="230"/>
+                                                <rect key="frame" x="20" y="373.5" width="382" height="230"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranked Graph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ms2-W7-79a">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="24"/>
@@ -69,8 +69,8 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-o2-Lgy">
-                                                <rect key="frame" x="20" y="241.5" width="382" height="88"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-o2-Lgy">
+                                                <rect key="frame" x="20" y="265.5" width="382" height="78"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="bZN-T4-Xw4">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="24"/>
@@ -96,7 +96,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Jru-ec-zr8">
-                                                        <rect key="frame" x="0.0" y="64" width="382" height="24"/>
+                                                        <rect key="frame" x="0.0" y="54" width="382" height="24"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Normal MMR:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8H-gp-pp0">
                                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="24"/>
@@ -121,7 +121,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="lTO-ai-Foe">
-                                                <rect key="frame" x="20" y="629.5" width="382" height="230"/>
+                                                <rect key="frame" x="20" y="623.5" width="382" height="230"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Normal Graph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kp-PA-0ya">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="24"/>
@@ -138,25 +138,34 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Sourced Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDh-gB-lLt" userLabel="Date sourced">
+                                                <rect key="frame" x="20" y="221.5" width="382" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="qDh-gB-lLt" firstAttribute="top" secondItem="LDT-tI-Isn" secondAttribute="bottom" constant="20" id="72e-us-kOo"/>
                                             <constraint firstAttribute="trailing" secondItem="n22-dK-1Ud" secondAttribute="trailing" constant="20" id="7dw-fV-BCB"/>
                                             <constraint firstAttribute="trailing" secondItem="lTO-ai-Foe" secondAttribute="trailing" constant="20" id="868-NJ-X1z"/>
-                                            <constraint firstItem="4rD-NC-TQh" firstAttribute="top" secondItem="zdf-o2-Lgy" secondAttribute="bottom" constant="40" id="9dH-w0-fkm"/>
+                                            <constraint firstItem="qDh-gB-lLt" firstAttribute="leading" secondItem="02a-gz-wa2" secondAttribute="leading" constant="20" id="8jT-8k-SOc"/>
                                             <constraint firstItem="lTO-ai-Foe" firstAttribute="leading" secondItem="02a-gz-wa2" secondAttribute="leading" constant="20" id="CGx-Nc-ibH"/>
-                                            <constraint firstItem="lTO-ai-Foe" firstAttribute="top" secondItem="4rD-NC-TQh" secondAttribute="bottom" constant="30" id="CIP-XM-5Gu"/>
+                                            <constraint firstItem="lTO-ai-Foe" firstAttribute="top" secondItem="4rD-NC-TQh" secondAttribute="bottom" constant="20" id="CIP-XM-5Gu"/>
                                             <constraint firstItem="n22-dK-1Ud" firstAttribute="leading" secondItem="02a-gz-wa2" secondAttribute="leading" constant="20" id="D9s-9E-fO5"/>
                                             <constraint firstItem="n22-dK-1Ud" firstAttribute="top" secondItem="02a-gz-wa2" secondAttribute="top" constant="30" id="FIJ-Y5-JKO"/>
+                                            <constraint firstItem="zdf-o2-Lgy" firstAttribute="top" secondItem="qDh-gB-lLt" secondAttribute="bottom" constant="20" id="FeK-PD-xxo"/>
+                                            <constraint firstAttribute="trailing" secondItem="qDh-gB-lLt" secondAttribute="trailing" constant="20" id="FoO-CE-mHL"/>
                                             <constraint firstItem="4rD-NC-TQh" firstAttribute="leading" secondItem="02a-gz-wa2" secondAttribute="leading" constant="20" id="J4K-nR-u8u"/>
                                             <constraint firstItem="LDT-tI-Isn" firstAttribute="top" secondItem="n22-dK-1Ud" secondAttribute="bottom" constant="30" id="Yfj-QW-7Iq"/>
                                             <constraint firstAttribute="trailing" secondItem="zdf-o2-Lgy" secondAttribute="trailing" constant="20" id="drr-2c-Knf"/>
                                             <constraint firstItem="zdf-o2-Lgy" firstAttribute="leading" secondItem="02a-gz-wa2" secondAttribute="leading" constant="20" id="gZV-Av-c8Q"/>
                                             <constraint firstItem="LDT-tI-Isn" firstAttribute="leading" secondItem="02a-gz-wa2" secondAttribute="leading" constant="20" id="h6D-wN-xo3"/>
                                             <constraint firstAttribute="trailing" secondItem="4rD-NC-TQh" secondAttribute="trailing" constant="20" id="hSG-qG-lxc"/>
+                                            <constraint firstItem="4rD-NC-TQh" firstAttribute="top" secondItem="zdf-o2-Lgy" secondAttribute="bottom" constant="30" id="mL4-hW-y6x"/>
                                             <constraint firstAttribute="height" constant="818" id="uTz-Jq-NCo"/>
                                             <constraint firstAttribute="trailing" secondItem="LDT-tI-Isn" secondAttribute="trailing" constant="20" id="wNO-7b-jZe"/>
-                                            <constraint firstItem="zdf-o2-Lgy" firstAttribute="top" secondItem="LDT-tI-Isn" secondAttribute="bottom" constant="40" id="yN7-Wj-9Kb"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -182,6 +191,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dateSourcedLabel" destination="qDh-gB-lLt" id="U1c-jT-sHy"/>
                         <outlet property="normalMMRActivityIndicator" destination="Ull-ZF-cTI" id="vPz-Yg-Aex"/>
                         <outlet property="normalMMRLabel" destination="AgD-5C-Dvb" id="al9-WO-iWJ"/>
                         <outlet property="rankedMMRActivityIndicator" destination="DSb-Eh-YU2" id="RJb-fO-3xE"/>
