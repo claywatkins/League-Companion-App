@@ -19,6 +19,8 @@ class HomeViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        rankedMMRLabel.isHidden = true
+        normalMMRLabel.isHidden = true
     }
     
     // MARK: - IBAction
@@ -29,13 +31,17 @@ class HomeViewController: UIViewController {
                 let returnedMMR = try result.get()
                 DispatchQueue.main.async {
                     if let rankedMMR = returnedMMR.ranked.avg {
+                        self.rankedMMRLabel.isHidden = false
                         self.rankedMMRLabel.text = "\(rankedMMR)"
                     } else {
+                        self.rankedMMRLabel.isHidden = false
                         self.rankedMMRLabel.text = "No MMR Found"
                     }
                     if let normalMMR = returnedMMR.normal.avg {
+                        self.normalMMRLabel.isHidden = false
                         self.normalMMRLabel.text = "\(normalMMR)"
                     } else {
+                        self.normalMMRLabel.isHidden = false
                         self.rankedMMRLabel.text = "No MMR Found"
                     }
                 }
