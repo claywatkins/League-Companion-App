@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Charts
 
 class HomeViewController: UIViewController {
     // MARK: - IBOutlet
@@ -21,6 +22,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - Properties
     var networkController = NetworkController.shared
+    var dataController = DataController.shared
     let df = DateFormatter()
     
     // MARK: - Lifecycle
