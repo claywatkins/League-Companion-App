@@ -9,6 +9,9 @@ import UIKit
 
 class HomeViewController: UIViewController {
     // MARK: - IBOutlet
+    @IBOutlet weak var mmrDataView: UIView!
+    @IBOutlet weak var rankedGraphView: UIView!
+    @IBOutlet weak var normalGraphView: UIView!
     @IBOutlet weak var dateSourcedLabel: UILabel!
     @IBOutlet weak var rankedMMRLabel: UILabel!
     @IBOutlet weak var rankedMMRActivityIndicator: UIActivityIndicatorView!
