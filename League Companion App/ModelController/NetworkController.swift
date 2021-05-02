@@ -15,11 +15,17 @@ enum NetworkError: Error {
 
 class NetworkController {
     static let shared = NetworkController()
-    let baseURL = URL(string: "https://na.whatismymmr.com/api/v1/summoner?name=")!
+    let baseURL = URL(string: "https://na.whatismymmr.com")!
     
     func getMMR(summonerName: String, completion: @escaping (Result<MMR, NetworkError>) -> Void) {
-        let requestURL = baseURL.appendingPathComponent(summonerName)
-        var request = URLRequest(url: requestURL)
+        
+        var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)!
+        urlComponents.path = "/api/v1/summoner"
+        urlComponents.queryItems = [
+            URLQueryItem(name: "name", value: summonerName)
+        ]
+        let requestURL = urlComponents.url?.absoluteURL
+        var request = URLRequest(url: requestURL!)
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
