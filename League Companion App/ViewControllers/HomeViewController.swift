@@ -60,18 +60,38 @@ class HomeViewController: UIViewController, ChartViewDelegate {
     }
     
     private func updateCharts() {
-        let rankedHistory = dataController.rankedHistory
-        let normalHistory = dataController.normalHistory
+        var rankedHistory: [Historical] {
+            let sorted = dataController.rankedHistory.sorted(by: {$0.timestamp! < $1.timestamp!})
+            let final = 
+        }
+        let normalHistory = dataController.normalHistory.sorted(by: {$0.timestamp! < $1.timestamp!})
+        
         if dataController.normalHistory.count != 0 {
             var lineChartDataEntry:[ChartDataEntry] = []
-            for i in dataController.normalHistory.indices {
+            for i in 0..<dataController.normalHistory.count{
                 let value = ChartDataEntry(x: normalHistory[i].timestamp!, y: Double(normalHistory[i].avg!))
                 lineChartDataEntry.append(value)
             }
             let set = LineChartDataSet(entries: lineChartDataEntry)
-            set.colors = ChartColorTemplates.joyful()
             let data = LineChartData(dataSet: set)
+            self.df.dateFormat = "MM dd"
+            normalHistoryGraph.xAxis.valueFormatter = 
+            
             normalHistoryGraph.data = data
+        } else {
+            normalHistoryGraph.data = nil
+        }
+        if dataController.rankedHistory.count != 0 {
+            var lineChartDataEntry:[ChartDataEntry] = []
+            for i in 0..<dataController.rankedHistory.count{
+                let value = ChartDataEntry(x: rankedHistory[i].timestamp!, y: Double(rankedHistory[i].avg!))
+                lineChartDataEntry.append(value)
+            }
+            let set = LineChartDataSet(entries: lineChartDataEntry)
+            let data = LineChartData(dataSet: set)
+            rankedHistoryGraph.data = data
+        } else {
+            rankedHistoryGraph.data = nil
         }
     }
     
@@ -93,13 +113,11 @@ class HomeViewController: UIViewController, ChartViewDelegate {
                 if let rankedHistory = returnedMMR.ranked.historical {
                     for data in rankedHistory {
                         self?.dataController.rankedHistory.append(data)
-                        print(self?.dataController.rankedHistory.count)
                     }
                 }
                 if let normalHistory = returnedMMR.normal.historical {
                     for data in normalHistory {
                         self?.dataController.normalHistory.append(data)
-                        print(self?.dataController.rankedHistory.count)
                     }
                 }
                 DispatchQueue.main.async { [weak self] in
